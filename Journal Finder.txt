@@ -1,0 +1,307 @@
+Jingchuan Zhou 01656348
+COMP 5460
+
+ACM Transactions on Graphics (TOG)
+Recent Issue
+@article{Guarnera:2017:WFM:3127587.3132187,
+ 
+author = {Guarnera, Giuseppe Claudio and Hall, Peter and Chesnais, Alain and Glencross, Mashhuda},
+ 
+title = {Woven Fabric Model Creation from a Single Image},
+ 
+journal = {ACM Trans. Graph.},
+ 
+issue_date = {October 2017},
+ 
+volume = {36},
+ 
+number = {5},
+ 
+month = oct,
+ 
+year = {2017},
+ 
+issn = {0730-0301},
+ 
+pages = {165:1--165:13},
+ 
+articleno = {165},
+ 
+numpages = {13},
+ 
+url = {http://doi.acm.org/10.1145/3132187},
+ 
+doi = {10.1145/3132187},
+ 
+acmid = {3132187},
+ 
+publisher = {ACM},
+ 
+address = {New York, NY, USA},
+ 
+keywords = {Appearance modeling, depth map, pseudo BTF, reverse engineering, textiles, weave pattern},
+}
+
+Older Issue
+@article{Wu:1992:CQD:146443.146475,
+ author = {Wu, Xiaolin},
+ title = {Color Quantization by Dynamic Programming and Principal Analysis},
+ journal = {ACM Trans. Graph.},
+ issue_date = {Oct. 1992},
+ volume = {11},
+ number = {4},
+ month = oct,
+ year = {1992},
+ issn = {0730-0301},
+ pages = {348--372},
+ numpages = {25},
+ url = {http://doi.acm.org/10.1145/146443.146475},
+ doi = {10.1145/146443.146475},
+ acmid = {146475},
+ publisher = {ACM},
+ address = {New York, NY, USA},
+ keywords = {algorithm analysis, clustering, color quantization, dynamic programming, principal analysis},
+} 
+
+IEEE Transactions on Visualization and Computer Graphics (TVCG)
+
+Recent Issue
+@ARTICLE{7990052, 
+author={M. Overby and G. E. Brown and J. Li and R. Narain}, 
+journal={IEEE Transactions on Visualization and Computer Graphics}, 
+title={ADMM $supseteq$ Projective Dynamics: Fast Simulation of Hyperelastic Models with Dynamic Constraints}, 
+year={2017}, 
+volume={23}, 
+number={10}, 
+pages={2222-2234}, 
+keywords={computer animation;optimisation;alternating direction method of multipliers optimization algorithm;animation;computer graphics;dynamic constraints;hard constraints;hyperelastic models;nonlinear constitutive models;prefactored system matrix;Convergence;Convex functions;Dynamics;Heuristic algorithms;Optimization;Robustness;Skin;Computer graphics;animation;computer simulation;dynamics;optimization methods}, 
+doi={10.1109/TVCG.2017.2730875}, 
+ISSN={1077-2626}, 
+month={Oct},}
+
+Older Issue
+@ARTICLE{4492773, 
+author={V. Vinayagamoorthy and A. Steed and M. Slater}, 
+journal={IEEE Transactions on Visualization and Computer Graphics}, 
+title={The Impact of a Character Posture Model on the Communication of Affect in an Immersive Virtual Environment}, 
+year={2008}, 
+volume={14}, 
+number={5}, 
+pages={965-982}, 
+keywords={virtual reality;CAVE-like system;affective postures;character posture model;data-collection methods;full-body virtual characters;immersive virtual environment;virtual scene colors;Animation;Virtual reality;Affect;Communication;Computer Graphics;Cues;Facial Expression;Humans;Posture;Task Performance and Analysis;User-Computer Interface;Visual Perception}, 
+doi={10.1109/TVCG.2008.62}, 
+ISSN={1077-2626}, 
+month={Sept},}
+
+IEEE Computer Graphics and Applications (CG&A)
+
+Recent Issue
+@ARTICLE{8047456, 
+author={K. Vasylevska and H. Kaufmann}, 
+journal={IEEE Computer Graphics and Applications}, 
+title={Compressing VR: Fitting Large Virtual Environments within Limited Physical Space}, 
+year={2017}, 
+volume={37}, 
+number={5}, 
+pages={85-91}, 
+keywords={virtual reality;compressing VR;fitting large virtual environments;limited physical space;nonintrusive user redirection;spatial compression;spatial manipulation;virtual reality;walkable virtual space;Large-scale systems;Spatial resolution;Virtual environments;Virtual reality;computer graphics;immersive VR;redirected walking;spatial interfaces;virtual environments;virtual reality}, 
+doi={10.1109/MCG.2017.3621226}, 
+ISSN={0272-1716}, 
+month={},}
+
+Older Issue
+@ARTICLE{156019, 
+author={Y. Wang and A. Mangaser and P. Srinivasan}, 
+journal={IEEE Computer Graphics and Applications}, 
+title={A processor architecture for 3D graphics}, 
+year={1992}, 
+volume={12}, 
+number={5}, 
+pages={96-105}, 
+keywords={computer architecture;computer graphics;digital arithmetic;performance evaluation;reduced instruction set computing;3-D vectors;3D graphics;DLX/3DCP architecture;RISC processors;dedicated special-purpose hardware;floating-point operations;general-purpose programmability;high-level object-oriented language C++;parallel processing;performance;processor architecture;Application software;Assembly;Computer architecture;Computer graphics;Feeds;Hardware;Parallel processing;Pipeline processing;Reduced instruction set computing;Vector processors}, 
+doi={10.1109/38.156019}, 
+ISSN={0272-1716}, 
+month={Sept},}
+
+ACM SIGGRAPH Computer Graphics (conference proceedings only, published as an ACM TOG issue)
+
+Recent Issue
+@article{Westman:2011:CCI:1982562.1982564,
+ author = {Westman, Hans},
+ title = {Coordination, Collaboration and the Impact of Computer Graphics},
+ journal = {SIGGRAPH Comput. Graph.},
+ issue_date = {February 2011},
+ volume = {45},
+ number = {1},
+ month = feb,
+ year = {2011},
+ issn = {0097-8930},
+ pages = {1:1--1:2},
+ articleno = {1},
+ numpages = {2},
+ url = {http://doi.acm.org/10.1145/1982562.1982564},
+ doi = {10.1145/1982562.1982564},
+ acmid = {1982564},
+ publisher = {ACM},
+ address = {New York, NY, USA},
+} 
+
+Older Issue
+@article{Hibbard:2000:CVS:359293.359299,
+ author = {Hibbard, Bill},
+ title = {Confessions of a Visualization Skeptic},
+ journal = {SIGGRAPH Comput. Graph.},
+ issue_date = {Aug. 2000},
+ volume = {34},
+ number = {3},
+ month = aug,
+ year = {2000},
+ issn = {0097-8930},
+ pages = {11--13},
+ numpages = {3},
+ url = {http://doi.acm.org/10.1145/359293.359299},
+ doi = {10.1145/359293.359299},
+ acmid = {359299},
+ publisher = {ACM},
+ address = {New York, NY, USA},
+} 
+
+Computers and Graphics (C&G)
+
+Recent Issue
+@article{INTERIAN201714,
+
+title = "Curve and surface fitting by implicit polynomials: Optimum degree finding and heuristic refinement",
+
+journal = "Computers & Graphics",
+
+volume = "67",
+
+pages = "14 - 23",
+
+year = "2017",
+
+issn = "0097-8493",
+doi = "https://doi.org/10.1016/j.cag.2017.05.002",
+
+url = "http://www.sciencedirect.com/science/article/pii/S0097849317300444",
+
+author = "Ruben Interian and Juan M. Otero and Celso C. Ribeiro and Anselmo A. Montenegro",
+
+keywords = "Implicit polynomial, Curve fitting, Surface fitting, Object representations, Optimization"
+}
+
+Older Issue
+@article{JOSESERONARBELOA1992383,
+
+title = "Visualization and finite element techniques for seismic interpretation",
+
+journal = "Computers & Graphics",
+volume = "16",
+
+number = "4",
+
+pages = "383 - 394",
+
+year = "1992",
+issn = "0097-8493",
+
+doi = "https://doi.org/10.1016/0097-8493(92)90025-Q",
+
+url = "http://www.sciencedirect.com/science/article/pii/009784939290025Q",
+
+author = "Francisco Jos¨¦Ser¨®n Arbeloa"
+}
+
+Computer Graphics Forum (CGF)
+
+Recent Issue
+@article{12568671520171001,
+Author = {Bo, Z. and Lu, L. and Sharf, A. and Xia, Y. and Deussen, O. and Chen, B.},
+ISSN = {01677055},
+Journal = {Computer Graphics Forum},
+Keywords = {PARAMETRIC equations, THREE-dimensional printing, TREES, DIGITAL image processing, COMPUTER algorithms, COMPUTER graphics, COMPUTATIONAL geometry, CCS Concepts, Computing methodologies ¡ú Volumetric models, Parametric curve and surface models},
+Number = {7},
+Pages = {29 - 40},
+Title = {Printable 3D Trees.},
+Volume = {36},
+URL = {https://umasslowell.idm.oclc.org/login?url=http://search.ebscohost.com/login.aspx?direct=true&db=aph&AN=125686715&site=ehost-live},
+Year = {2017},
+}
+
+Older Issue
+@article{512984920000901,
+Author = {Lao, Zhiqiang and Li, Ling},
+ISSN = {01677055},
+Journal = {Computer Graphics Forum},
+Keywords = {ANIMATION (Cinematography), COMPUTER graphics, THREE-dimensional imaging, DIGITAL image processing},
+Number = {3},
+Pages = {0},
+Title = {Video-based Approach to Human Animation.},
+Volume = {19},
+URL = {https://umasslowell.idm.oclc.org/login?url=http://search.ebscohost.com/login.aspx?direct=true&db=aph&AN=5129849&site=ehost-live},
+Year = {2000},
+}
+
+Visual Computer
+
+Recent Issue
+@Article{Luo2017,
+
+author="Luo, Guoliang
+and Lei, Gang
+and Cao, Yuanlong
+and Liu, Qinghua
+and Seo, Hyewon",
+
+title="Joint entropy-based motion segmentation for 3D animations",
+
+journal="The Visual Computer",
+year="2017",
+
+month="Oct",
+day="01",
+
+volume="33",
+
+number="10",
+
+pages="1279--1289",
+
+
+issn="1432-2315",
+doi="10.1007/s00371-016-1313-1",
+url="https://doi.org/10.1007/s00371-016-1313-1"
+}
+
+
+
+Older Issue
+@Article{Jia2004,
+
+author="Jia, Jinyuan
+and Tang, Kai
+and Joneja, Ajay",
+title="Biconic subdivision of surfaces of revolution and its applications in intersection problems",
+
+journal="The Visual Computer",
+
+year="2004",
+
+month="Sep",
+
+day="01",
+
+volume="20",
+
+number="7",
+
+pages="457--478",
+
+abstract="This paper presents a novel method for the subdivision of surfaces of revolution. We develop a new technique for approximating the genertrix by a series of pairs of conic sections. By using an error estimate based on convex combination, an efficient least-squares approach is proposed that yields near-optimal fitting. The resulting surface approximation is shown to be more efficient than other tessellation methods in terms of the number of fitting segments. This in turn allows us to implement efficient and robust algorithms for such surfaces. In particular, novel intersection techniques based on the proposed subdivision method are introduced for the two most fundamental types of intersections -- line/surface and surface/surface intersections. The experimental results show that our method outperforms conventional methods significantly in both computing time and memory cost.",
+
+issn="1432-2315",
+doi="10.1007/s00371-004-0252-4",
+url="https://doi.org/10.1007/s00371-004-0252-4"
+}
+
