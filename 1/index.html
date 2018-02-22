@@ -1,0 +1,36 @@
+<!doctype html>
+<html class="no-js" lang="">
+<head>
+    <title>Jingchuan's Computer Graphic Assignment 1: Midpoint</title>
+    <h1 align="center">Computer Graphics I -- Programming Assignment 1: 2D Drawing</h1>
+    <style type="text/css">
+        body {font-family:Slanted;position:absolute;left:200px;top:30px;}
+    </style>
+</head>
+<body>
+	<h3 align="center">Jingchuan Zhou</h4>
+    <h3 align="center">01656348</h4>
+
+    <div class="container">
+        <section class="row">
+            <div>
+                <button class="btn btn-success" style="background-color:#EBEBEB; width:100px;height:30px;" onclick="isLine()"> Line</button>
+                <button class="btn btn-success" style="background-color:#EBEBEB; width:100px;height:30px;" onclick="isCircle()"> Circle</button>
+                <button class="btn btn-success" style="background-color:#EBEBEB; width:100px;height:30px;" onclick="isEllipse()"> Ellipse</button>
+                <button class="btn btn-success" style="background-color:#EBEBEB; width:100px;height:30px;" onclick="isRectangle()">Rectangle</button>
+                <button class="btn btn-success polygon" style="background-color:#EBEBEB; width:100px;height:30px;" onclick="isPolygon()" data-text-swap="Complete Polygon"> Polygon </button>
+                <button class="btn btn-success" style="background-color:#EBEBEB;  width:100px;height:30px;" onclick="isPolyline()"> Polyline</button>
+                <button class="btn btn-danger" style="background-color:#EBEBEB; width:100px;height:30px;" type="submit" onclick="clearCanvas()">Clear</button>
+                <br>
+                <br>
+            </div>
+            <div>
+                <canvas id="canvas" width="800" height="600" style="border: 5px solid #CDC5BF;"></canvas>
+            <div class="alert alert-info" role="alert"><p id="message"></p></div>
+            </div>
+        </section>
+    </div>
+    <hr>
+    <script src="JavaScript.js"></script>
+</body>
+</html>
