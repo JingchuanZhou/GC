@@ -1,0 +1,52 @@
+<!doctype html>
+<html class="no-js" lang="">
+<head>
+    <title>Jingchuan's Computer Graphic Assignment 2: 2D Drawing</title>
+    <h1 align="center">Computer Graphics I -- Programming Assignment 2: 2D Drawing</h1>
+    <style type="text/css">
+        body {font-family:Slanted;position:absolute;left:200px;top:30px;}
+    </style>
+</head>
+<body>
+	<h3 align="center">Jingchuan Zhou</h4>
+    <h3 align="center">01656348</h4>
+
+    <div class="container">
+        <section class="row">
+            <ul class="nav nav-pills menu">
+                    <li role="presentation" ><a href="problem1.html">Problem 1</a></li>
+                    <li role="presentation" class="active"><a href="problem2.html">Problem 2</a></li>
+            </ul>
+            <div><h3>Midterm 2. Wheel Design</h3></div>
+            
+            <table>
+                <tr>
+                    <td>
+                        <label>The radius of a round wheel: </label>
+                    </td>
+                    <td>
+                        <input type="text" name="" id="radius" >
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <label>The driver's score: </label>
+                    </td>
+                    <td>
+                        <input type="text" name="" id="score" >
+                    </td>
+                    <td>
+                        <button class="btn btn-success" style="background-color:#EBEBEB; width:100px;height:25px;" onclick="drawWheel()">Submit</button>
+                    </td>
+                </tr>
+            </table>
+            <div>
+                <canvas id="canvas" width="800" height="600" style="border: 5px solid #CDC5BF;"></canvas>
+            <div class="alert alert-info" role="alert"><p id="message"></p></div>
+            </div>
+        </section>
+    </div>
+    <hr>
+    <script src="javascript.js"></script>
+</body>
+</html>
