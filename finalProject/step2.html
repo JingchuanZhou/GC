@@ -1,0 +1,296 @@
+<!doctype html>
+<html class="no-js" lang="">
+<head>
+    <title>Jingchuan's Computer Graphic Assignment 3: final project</title>
+    <h1 align="center">Computer Graphics I -- Programming assignments and final project</h1>
+    <style type="text/css">
+        body {font-family:Slanted;position:absolute;left:200px;top:30px;}
+    </style>
+</head>
+<body>
+	<h3 align="center">Jingchuan Zhou</h4>
+    <h3 align="center">01656348</h4>
+
+    <div class="container">
+        <section class="row">
+            <div><h3> Draw three 2D "Cube"</h3></div>
+            <div style=" float:left">
+                <svg height="350" width="400" style="border: 5px solid #CDC5BF;">
+
+                <text style="fill:black;font-size:15pt" x="180" y="30">Front</text>
+                <rect id = "rectangle1" x="80" y="50" height="240" width="240" 
+                style="fill:red;stroke:black;stroke-width:5" />
+                <polyline id="l1" points="80 130, 320 130" 
+                style="fill:none;stroke:black;stroke-width:4" />
+                <polyline id="l2" points="80 210, 320 210"
+                style="fill:none;stroke:black;stroke-width:4" />
+                <polyline id="l3" points="160 50, 160 290" 
+                style="fill:none;stroke:black;stroke-width:4" />
+                <polyline id="l4" points="240 50, 240 290" 
+                style="fill:none;stroke:black;stroke-width:4" />
+                
+            </svg>
+            </div>
+            <div style=" float:left; margin-left: -5px">
+                <svg height="350" width="400" style="border: 5px solid #CDC5BF;">
+
+                    <text style="fill:black;font-size:15pt" x="180" y="30">Side</text>
+                    <rect id = "rectangle1" x="80" y="50" height="240" width="240" 
+                    style="fill:blue;stroke:black;stroke-width:5" />
+                    <polyline id="l1" points="80 130, 320 130" 
+                    style="fill:none;stroke:black;stroke-width:4" />
+                    <polyline id="l2" points="80 210, 320 210"
+                    style="fill:none;stroke:black;stroke-width:4" />
+                    <polyline id="l3" points="160 50, 160 290" 
+                    style="fill:none;stroke:black;stroke-width:4" />
+                    <polyline id="l4" points="240 50, 240 290" 
+                    style="fill:none;stroke:black;stroke-width:4" />
+
+                </svg>
+            </div>
+            <br>
+            <div style=" float:left;" >
+                <svg height="350" width="400" style="border: 5px solid #CDC5BF;">
+                    
+                    <text style="fill:black;font-size:15pt" x="180" y="30">Top</text>
+                    <rect id = "rectangle1" x="80" y="50" height="240" width="240" 
+                    style="fill:green;stroke:black;stroke-width:5" />
+                    <polyline id="l1" points="80 130, 320 130" 
+                    style="fill:none;stroke:black;stroke-width:4" />
+                    <polyline id="l2" points="80 210, 320 210"
+                    style="fill:none;stroke:black;stroke-width:4" />
+                    <polyline id="l3" points="160 50, 160 290" 
+                    style="fill:none;stroke:black;stroke-width:4" />
+                    <polyline id="l4" points="240 50, 240 290" 
+                    style="fill:none;stroke:black;stroke-width:4" />
+
+                </svg>
+            </div>
+            <!-- <div style=" float:left; margin-top: -10px; margin-left: -5px;">
+                <canvas id="canvas" width="400" height="350" style="border: 5px solid #CDC5BF;"</canvas>
+            </div> -->
+            <br>
+            <div style=" float:left; margin-left: 30px"><button class="btn btn-danger" style="background-color:#EBEBEB; width:100px;height:30px;" type="submit" onclick="draw()">3D Model</button></div>
+
+        </section>
+    </div>
+    <script src="three.js"></script>
+<script src="OrbitControls.js"></script>
+<script src="stats.min.js"></script>
+<script src="dat.gui.min.js"></script>
+<script>
+    var renderer;
+    function initRender() {
+        renderer = new THREE.WebGLRenderer({antialias: true});
+        renderer.setSize(window.innerWidth, window.innerHeight);
+        //Shadowing
+        renderer.shadowMap.enabled = true;
+        renderer.shadowMap.type = THREE.PCFSoftShadowMap; THREE.PCFShadowMap
+        document.body.appendChild(renderer.domElement);
+    }
+
+    var camera;
+    function initCamera() {
+        camera = new THREE.PerspectiveCamera(45, window.innerWidth / window.innerHeight, 0.1, 1000);
+        camera.position.set(0, 40, 100);
+        camera.lookAt(new THREE.Vector3(0, 0, 0));
+    }
+
+    var scene;
+    function initScene() {
+        scene = new THREE.Scene();
+    }
+
+    //init
+    var gui;
+    function initGui() {
+        //inti
+        gui = {
+            lightY: 30, //light y
+            cubeX: 25, //cube x
+            cubeY: 20, //cube y
+            cubeZ: -5 //cube z
+        };
+        var datGui = new dat.GUI();
+        
+        datGui.add(gui, "lightY", 0, 100);
+        datGui.add(gui, "cubeX", -30, 30);
+        datGui.add(gui, "cubeY", -30, 30);
+        datGui.add(gui, "cubeZ", -30, 30);
+    }
+
+    var light;
+    function initLight() {
+        scene.add(new THREE.AmbientLight(0x444444));
+
+        light = new THREE.PointLight(0xffffff);
+        light.position.set(15, 30, 10);
+
+        //shadow
+        light.castShadow = true;
+
+        scene.add(light);
+    }
+
+    var cube;
+    function initModel() {
+
+        //helper
+        var helper = new THREE.AxisHelper(10);
+        scene.add(helper);
+
+
+        //cube
+        var cubeGeometry = new THREE.Geometry();
+
+        //set nodes
+        var vertices = [
+            new THREE.Vector3(10, 10, 10), //v0
+            new THREE.Vector3(-10, 10, 10), //v1
+            new THREE.Vector3(-10, -10, 10), //v2
+            new THREE.Vector3(10, -10, 10), //v3
+            new THREE.Vector3(10, -10, -10), //v4
+            new THREE.Vector3(10, 10, -10), //v5
+            new THREE.Vector3(-10, 10, -10), //v6
+            new THREE.Vector3(-10, -10, -10) //v7
+        ];
+
+        cubeGeometry.vertices = vertices;
+
+        //set face
+        var faces=[
+            new THREE.Face3(0,1,2),
+            new THREE.Face3(0,2,3),
+            new THREE.Face3(0,3,4),
+            new THREE.Face3(0,4,5),
+            new THREE.Face3(1,6,7),
+            new THREE.Face3(1,7,2),
+            new THREE.Face3(6,5,4),
+            new THREE.Face3(6,4,7),
+            new THREE.Face3(5,6,1),
+            new THREE.Face3(5,1,0),
+            new THREE.Face3(3,2,7),
+            new THREE.Face3(3,7,4)
+        ];
+
+        cubeGeometry.faces = faces;
+
+        //generate vactor
+        cubeGeometry.computeFaceNormals();
+
+        cubeGeometry = new THREE.BoxBufferGeometry( 30 , 30, 30 );
+        var texture1 = THREE.ImageUtils.loadTexture("1.png");
+        var texture2= THREE.ImageUtils.loadTexture("2.png");
+        var texture3 = THREE.ImageUtils.loadTexture("3.png");
+        var texture4= THREE.ImageUtils.loadTexture("4.png");
+        var texture5 = THREE.ImageUtils.loadTexture("5.png");
+        var texture6 = THREE.ImageUtils.loadTexture("6.png");
+        var materialArr=[
+        //6face texture
+        new THREE.MeshPhongMaterial({map:texture1}),
+        new THREE.MeshPhongMaterial({map:texture2}),
+        new THREE.MeshPhongMaterial({map:texture3}),
+        new THREE.MeshPhongMaterial({map:texture4}),
+        new THREE.MeshPhongMaterial({map:texture5}),
+        new THREE.MeshPhongMaterial({map:texture6})
+        ];
+
+        var facematerial=new THREE.MeshFaceMaterial(materialArr);
+
+        // var texture = new THREE.TextureLoader().load( '1.png' );
+
+        // var cubeMaterial = new THREE.MeshLambertMaterial( { map: texture });
+
+        cube = new THREE.Mesh(cubeGeometry, facematerial);
+        cube.position.x = 30;
+        cube.position.y = 20;
+        cube.position.z = 30;
+
+        //shadow
+        cube.castShadow = true;
+
+        scene.add(cube);
+
+        //bottom plane
+        var planeGeometry = new THREE.PlaneGeometry(100, 100);
+        var planeMaterial = new THREE.MeshLambertMaterial({color: 0xaaaaaa});
+
+        var plane = new THREE.Mesh(planeGeometry, planeMaterial);
+        plane.rotation.x = -0.5 * Math.PI;
+        plane.position.y = -0;
+
+        //bottom shadow
+        plane.receiveShadow = true;
+
+        scene.add(plane);
+
+    }
+
+    //inti stats
+    var stats;
+    function initStats() {
+        stats = new Stats();
+        document.body.appendChild(stats.dom);
+    }
+
+    //inti control
+    var controls;
+    function initControls() {
+
+        controls = new THREE.OrbitControls(camera, renderer.domElement);
+
+        
+        controls.enableDamping = true;
+        controls.enableZoom = true;
+        controls.autoRotate = false;
+        controls.minDistance = 50;
+        controls.maxDistance = 200;
+        controls.enablePan = true;
+    }
+
+    function render() {
+        renderer.render(scene, camera);
+    }
+
+    //resize
+    function onWindowResize() {
+
+        camera.aspect = window.innerWidth / window.innerHeight;
+        camera.updateProjectionMatrix();
+        render();
+        renderer.setSize(window.innerWidth, window.innerHeight);
+
+    }
+
+    function animate() {
+        //update
+        render();
+
+        stats.update();
+
+        light.position.y = gui.lightY;
+        cube.position.x = gui.cubeX;
+        cube.position.y = gui.cubeY;
+        cube.position.z = gui.cubeZ;
+
+        controls.update();
+
+        requestAnimationFrame(animate);
+    }
+
+    function draw() {
+        initGui();
+        initRender();
+        initScene();
+        initCamera();
+        initLight();
+        initModel();
+        initControls();
+        initStats();
+
+        animate();
+        window.onresize = onWindowResize;
+    }
+</script>
+</body>
+</html>
