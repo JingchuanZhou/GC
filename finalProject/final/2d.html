@@ -1,0 +1,95 @@
+<!doctype html>
+<html class="no-js" lang="">
+<head>
+    <title>Jingchuan's Computer Graphic Assignment 3: final project</title>
+    <h1 align="center">Computer Graphics I -- Programming assignments and final project</h1>
+    <style type="text/css">
+        body {font-family:Slanted;position:absolute;left:200px;top:30px;}
+    </style>
+</head>
+<body>
+	<h3 align="center">Jingchuan Zhou</h4>
+    <h3 align="center">01656348</h4>
+    <h5>1. Modeling: create and store a 3D object by any number of these means:</h5>
+    <h5>a. Draw three 2D "elevations" (front, top, side -- see, for example, "my dream house" or "my dream car (front, side, top)"; your implementation should be able to "accept" any reasonable generic object, not just "my house" or "my car"). Upon drawing, store coordinates of the elevations in a way that will allow you to create a 3D model of the object from them.
+b. Enter coordinates: choose your model format(s) (e.g., vertices, edges, primitives, other).</h5>
+    <h5>2. Transform object: apply 3D (Translate/Rotate/Scale/SHear) transformations to the created object.</h5>
+    <h5>3. Viewing: view your created object from multiple views.</h5>
+    <h5>4. Transform camera/viewer/light sources(s).</h5>
+    <h5>5. Generate different projections of the objects (refer to class discussions about different projections, see projection "tree" see figure).</h5>
+    <h5>6. Edit/Change perspective projection vanishing points (1, 2, 3).</h5>
+    <h5>7. Create texture/bump/environmental mappings for the object.</h5>
+    <ul class="nav nav-pills menu">
+        <li role="presentation" class="active"><a href="2d.html">2D Model</a></li>
+        <li role="presentation"><a href="3d.html">3D Model</a></li>
+    </ul>
+    <div class="container">
+        <div>
+        <button id="translate">Translate to: </button> <input type="text" name="" id="translate_val" value="30, 30"> (x, y)
+        <br>
+        <button id="rotate">Rotate to: </button> <input type="text" name="" id="rotate_val" value="30, 30, 180"> (degree, x, y)
+        <br>
+        <button id="scale">Scale to: </button> <input type="text" name="" id="scale_val" value="0.5, 0.5"> (x, y)
+        <br>
+        <button id="shear">Shear to: </button> <input type="text" name="" id="shear_val" value="20, 20"> (x, y)
+        </div>
+        <section class="row">
+            <div><h3> Draw three 2D "Cube"</h3></div>
+            <div style=" float:left">
+                <svg height="350" width="400" style="border: 5px solid #CDC5BF;">
+
+                <text style="fill:black;font-size:15pt" x="180" y="30">Front</text>
+                <rect id = "rectangle1" x="80" y="50" height="240" width="240" 
+                style="fill:red;stroke:black;stroke-width:5" />
+                <polyline id="l1" points="80 130, 320 130" 
+                style="fill:none;stroke:black;stroke-width:4" />
+                <polyline id="l2" points="80 210, 320 210"
+                style="fill:none;stroke:black;stroke-width:4" />
+                <polyline id="l3" points="160 50, 160 290" 
+                style="fill:none;stroke:black;stroke-width:4" />
+                <polyline id="l4" points="240 50, 240 290" 
+                style="fill:none;stroke:black;stroke-width:4" />
+                
+            </svg>
+            </div>
+            <div style=" float:left; margin-left: -5px">
+                <svg height="350" width="400" style="border: 5px solid #CDC5BF;">
+
+                    <text style="fill:black;font-size:15pt" x="180" y="30">Side</text>
+                    <rect id = "rectangle2" x="80" y="50" height="240" width="240" 
+                    style="fill:blue;stroke:black;stroke-width:5" />
+                    <polyline id="l5" points="80 130, 320 130" 
+                    style="fill:none;stroke:black;stroke-width:4" />
+                    <polyline id="l6" points="80 210, 320 210"
+                    style="fill:none;stroke:black;stroke-width:4" />
+                    <polyline id="l7" points="160 50, 160 290" 
+                    style="fill:none;stroke:black;stroke-width:4" />
+                    <polyline id="l8" points="240 50, 240 290" 
+                    style="fill:none;stroke:black;stroke-width:4" />
+
+                </svg>
+            </div>
+            <div style=" float:left; margin-left: -5px" >
+                <svg height="350" width="400" style="border: 5px solid #CDC5BF;">
+                    
+                    <text style="fill:black;font-size:15pt" x="180" y="30">Top</text>
+                    <rect id = "rectangle3" x="80" y="50" height="240" width="240" 
+                    style="fill:green;stroke:black;stroke-width:5" />
+                    <polyline id="l9" points="80 130, 320 130" 
+                    style="fill:none;stroke:black;stroke-width:4" />
+                    <polyline id="l10" points="80 210, 320 210"
+                    style="fill:none;stroke:black;stroke-width:4" />
+                    <polyline id="l11" points="160 50, 160 290" 
+                    style="fill:none;stroke:black;stroke-width:4" />
+                    <polyline id="l12" points="240 50, 240 290" 
+                    style="fill:none;stroke:black;stroke-width:4" />
+
+                </svg>
+                
+            </div>
+
+        </section>
+    </div>
+    <script src="2d.js"></script>
+</body>
+</html>

@@ -1,0 +1,30 @@
+Jingchuan Zhou 01656348
+FinalProject Manual
+
+The project is completed with the following functions
+
+1. Modeling: create and store a 3D object by any number of these means:
+a. Draw three 2D "elevations" (front, top, side -- see, for example, "my dream house" or "my dream car (front, side, top)"; 
+your implementation should be able to "accept" any reasonable generic object, not just "my house" or "my car"). 
+Upon drawing, store coordinates of the elevations in a way that will allow you to create a 3D model of the object from them. b. Enter coordinates: choose your model format(s) (e.g., vertices, edges, primitives, other).
+
+Can be view by the 2D.html page. And 2D transform functions can be seen on the top of the model. You can change the value to modify it.
+
+2. Transform object: apply 3D (Translate/Rotate/Scale/SHear) transformations to the created object.
+Can be view by 3D.html page. And 3D transform functions can be seen on the right side of the model on the controler. You can change the value to modify it.
+
+3. Viewing: view your created object from multiple views.
+There are acouple of button on the 3D model by different views.
+
+4. Transform camera/viewer/light sources(s).
+The camera and light control also on the right side of the 3D.html page.
+
+5. Generate different projections of the objects (refer to class discussions about different projections, see projection "tree" see figure).
+The projection button is follow by the view button.
+
+6. Edit/Change perspective projection vanishing points (1, 2, 3).
+The vabishingbutton is follow by the view button.
+
+7. Create texture/bump/environmental mappings for the object.
+The texture mapping button is the last button on the top.
+
